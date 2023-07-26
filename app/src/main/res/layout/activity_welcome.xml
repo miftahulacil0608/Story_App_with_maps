@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".ui.WelcomeActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/welcomeimage">
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineHorizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.58" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineVerticalCenter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineVerticalLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.08" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineVerticalRight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.92" />
+
+        <ImageView
+            android:id="@+id/logoApp"
+            android:layout_width="58dp"
+            android:layout_height="58dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/logoicon"
+            app:layout_constraintEnd_toStartOf="@+id/guidelineVerticalRight"
+            app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintStart_toStartOf="@+id/guidelineVerticalLeft"
+            app:layout_constraintTop_toTopOf="@+id/guidelineHorizontal" />
+
+        <TextView
+            android:id="@+id/titleAppFirst"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="@string/titleAppFirst"
+            android:textColor="@color/black"
+            android:textSize="24dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/logoApp"
+            app:layout_constraintStart_toStartOf="@+id/logoApp"
+            app:layout_constraintTop_toBottomOf="@+id/logoApp" />
+
+        <Button
+            android:id="@+id/btnLoginWelcome"
+            android:layout_width="331dp"
+            android:layout_height="wrap_content"
+            android:alpha="0"
+            android:textAllCaps="false"
+            android:text="@string/login"
+            app:layout_constraintTop_toBottomOf="@+id/titleAppFirst"
+            app:layout_constraintStart_toStartOf="@id/guidelineVerticalLeft"
+            app:layout_constraintEnd_toStartOf="@id/guidelineVerticalRight"
+            android:layout_marginTop="30dp"
+            />
+
+        <Button
+            android:id="@+id/btnSignupWelcome"
+            android:layout_width="331dp"
+            android:layout_height="wrap_content"
+            android:alpha="0"
+            android:textAllCaps="false"
+            android:layout_marginTop="5dp"
+            android:text="@string/signup"
+            app:layout_constraintEnd_toStartOf="@id/guidelineVerticalRight"
+            app:layout_constraintStart_toStartOf="@id/guidelineVerticalLeft"
+            app:layout_constraintTop_toBottomOf="@id/btnLoginWelcome" />
+        <TextView
+            android:id="@+id/copyright"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/titleCopyright"
+            android:layout_marginTop="40dp"
+            app:layout_constraintTop_toBottomOf="@id/btnSignupWelcome"
+            app:layout_constraintStart_toStartOf="@id/guidelineVerticalLeft"
+            app:layout_constraintEnd_toStartOf="@id/guidelineVerticalRight"
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
